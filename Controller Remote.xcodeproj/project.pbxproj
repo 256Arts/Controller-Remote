@@ -11,6 +11,11 @@
 		1BE90F6C29176889007543EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE90F6B29176889007543EB /* ContentView.swift */; };
 		1BE90F6E2917688B007543EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE90F6D2917688B007543EB /* Assets.xcassets */; };
 		1BE90F712917688B007543EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BE90F702917688B007543EB /* Preview Assets.xcassets */; };
+		1BE90F7A29176D89007543EB /* InputController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE90F7929176D89007543EB /* InputController.swift */; };
+		1BE90F7C29177097007543EB /* CursorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE90F7B29177097007543EB /* CursorController.swift */; };
+		1BE90F7E2917974B007543EB /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE90F7D2917974B007543EB /* UserDefaults.swift */; };
+		1BE90F8029181D3A007543EB /* DpadStepPreset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE90F7F29181D3A007543EB /* DpadStepPreset.swift */; };
+		1BE90F822918218A007543EB /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE90F812918218A007543EB /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,12 @@
 		1BE90F6D2917688B007543EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BE90F702917688B007543EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1BE90F722917688B007543EB /* Controller_Remote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Controller_Remote.entitlements; sourceTree = "<group>"; };
+		1BE90F7829176C83007543EB /* Controller-Remote-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Controller-Remote-Info.plist"; sourceTree = SOURCE_ROOT; };
+		1BE90F7929176D89007543EB /* InputController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputController.swift; sourceTree = "<group>"; };
+		1BE90F7B29177097007543EB /* CursorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursorController.swift; sourceTree = "<group>"; };
+		1BE90F7D2917974B007543EB /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		1BE90F7F29181D3A007543EB /* DpadStepPreset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DpadStepPreset.swift; sourceTree = "<group>"; };
+		1BE90F812918218A007543EB /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +63,14 @@
 		1BE90F6829176889007543EB /* Controller Remote */ = {
 			isa = PBXGroup;
 			children = (
+				1BE90F7829176C83007543EB /* Controller-Remote-Info.plist */,
 				1BE90F6929176889007543EB /* Controller_RemoteApp.swift */,
 				1BE90F6B29176889007543EB /* ContentView.swift */,
+				1BE90F812918218A007543EB /* SettingsView.swift */,
+				1BE90F7929176D89007543EB /* InputController.swift */,
+				1BE90F7B29177097007543EB /* CursorController.swift */,
+				1BE90F7F29181D3A007543EB /* DpadStepPreset.swift */,
+				1BE90F7D2917974B007543EB /* UserDefaults.swift */,
 				1BE90F6D2917688B007543EB /* Assets.xcassets */,
 				1BE90F722917688B007543EB /* Controller_Remote.entitlements */,
 				1BE90F6F2917688B007543EB /* Preview Content */,
@@ -139,8 +156,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BE90F822918218A007543EB /* SettingsView.swift in Sources */,
+				1BE90F7A29176D89007543EB /* InputController.swift in Sources */,
+				1BE90F7E2917974B007543EB /* UserDefaults.swift in Sources */,
 				1BE90F6C29176889007543EB /* ContentView.swift in Sources */,
+				1BE90F8029181D3A007543EB /* DpadStepPreset.swift in Sources */,
 				1BE90F6A29176889007543EB /* Controller_RemoteApp.swift in Sources */,
+				1BE90F7C29177097007543EB /* CursorController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,13 +296,15 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Controller-Remote-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jaydenirwin.Controller-Remote";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaydenirwin.controllerremote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -301,13 +325,15 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Controller-Remote-Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jaydenirwin.Controller-Remote";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jaydenirwin.controllerremote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
